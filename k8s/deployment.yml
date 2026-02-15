@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: springboot-container
-        image: hello-spring-app:latest
+        image: pfework2026/hello-spring-app:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
