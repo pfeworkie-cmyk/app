@@ -1,5 +1,6 @@
-# Use official OpenJDK 21 as base image
-FROM openjdk:21-jdk-slim
+# Use official OpenJDK 21 slim (Debian Bullseye) as base
+FROM openjdk:21-jdk-slim-bullseye
+WORKDIR /app
 # Set working directory inside container
 WORKDIR /app
 
