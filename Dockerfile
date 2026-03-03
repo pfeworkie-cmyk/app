@@ -1,14 +1,14 @@
-# Use official OpenJDK 21 slim (Debian Bullseye) as base
-FROM openjdk:21-jdk-slim-bullseye
-WORKDIR /app
-# Set working directory inside container
+# Image Java 21 officielle maintenue
+FROM eclipse-temurin:21-jdk-jammy
+
+# Répertoire de travail
 WORKDIR /app
 
-# Copy the jar file from host to container
+# Copier le jar
 COPY target/*.jar app.jar
 
-# Expose the default Spring Boot port
+# Port interne Spring Boot
 EXPOSE 8080
 
-# Run the Spring Boot application
+# Lancer l'application
 ENTRYPOINT ["java","-jar","app.jar"]
